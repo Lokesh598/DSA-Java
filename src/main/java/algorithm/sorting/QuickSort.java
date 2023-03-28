@@ -1,6 +1,5 @@
 package algorithm.sorting;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -24,8 +23,6 @@ public class QuickSort {
             for (int i = 0; i<n; i++) {
                 arr[i] = sc.nextInt();
             }
-
-            new Solution();
             Solution.quickSort(arr, 0, n-1);
             printArray(arr);
             T--;
