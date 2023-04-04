@@ -1,12 +1,14 @@
 package dynamicprogramming;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Knapsack01 {
     public static void main(String[] args) throws Exception{
+//        List<List<Integer>> x = new ArrayList<>();
 
         Scanner sc = new Scanner(System.in);
-
         int n = sc.nextInt();
         int[] val = new int[n];
         int[] wts = new int[n];
