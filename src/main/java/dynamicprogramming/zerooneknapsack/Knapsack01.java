@@ -1,4 +1,4 @@
-package dynamicprogramming;
+package dynamicprogramming.zerooneknapsack;
 
 import java.util.ArrayList;
 import java.util.List;
