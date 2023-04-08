@@ -4,6 +4,9 @@ import java.util.Scanner;
 
 
 /**
+ * @Problem: extended of Minimum Sum Partion
+ *
+ *
  * Input:
  * n = 4, d = 3
  * arr[] =  { 5, 2, 6, 4}
