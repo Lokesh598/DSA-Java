@@ -12,7 +12,7 @@ package dynamicprogramming.longestcommonsubsequence.lcsbasedproblem;
  * is "CDGH" which has length 4.
  */
 public class LongestCommonSubstring {
-    static int tb[][];
+    static int[][] tb;
     static int longestCommonSubstr(String s1, String s2, int x, int y){
         // code here
         int res = 0;
