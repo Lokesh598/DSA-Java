@@ -3,6 +3,10 @@ package dynamicprogramming.oneddp;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+
+/**
+ * leetcode problem
+ */
 public class HouseRobber2 {
     static int[] dp;
     private static int rob(ArrayList<Integer> nums, int n) {
