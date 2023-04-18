@@ -1,5 +1,12 @@
 package dynamicprogramming.oneddp;
 
+/**
+ * Input:
+ * n = 6
+ * a[] = {5,5,10,100,10,5}
+ * Output: 110
+ * Explanation: 5+100+5=110
+ */
 public class HouseRobber {
     static int[] dp;
     private static int rob(int[] nums, int n) {
@@ -21,7 +28,7 @@ public class HouseRobber {
     }
 
     public static void main(String[] args) {
-        int[] nums = new int[]{1,2,3,1};
+        int[] nums = new int[]{1,2,3};
         System.out.println(FindMaxSum(nums, 4));
     }
 }
