@@ -1,10 +1,7 @@
 package datastructure.stack;
 
 
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Stack;
+import java.util.*;
 
 /**
  * Nearest Greater Element to Right
@@ -64,13 +61,14 @@ public class NearestGreaterElement {
     }
     public static long[] nextLargerElement(long[] arr, int n) {
         long[] res = new long[n];
-
+        List<Integer> res1 = new ArrayList<>();
         Stack<Long> st = new Stack<>();
         for (int i = n-1; i >= 0; i--) {
             if(st.empty()) {
                 res[i] = -1;
                 st.push(arr[i]);
             } else if (st.size() > 0 && st.peek() > arr[i]) {
+//                res1.add(i, st.peek());
                 res[i] = st.peek();
                 st.push(arr[i]);
             } else if (st.size() > 0 && st.peek() <= arr[i]) {
