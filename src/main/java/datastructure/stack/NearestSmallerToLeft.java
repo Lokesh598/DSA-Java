@@ -16,7 +16,7 @@ import java.util.Stack;
  * numbers are 1, 0 and 3. But among them 3
  * is closest. Similary for 5 it is 4.
  */
-public class NearestSmallerElement {
+public class NearestSmallerToLeft {
     static List<Integer> leftSmaller(int n, int arr[])
     {
         //code here
