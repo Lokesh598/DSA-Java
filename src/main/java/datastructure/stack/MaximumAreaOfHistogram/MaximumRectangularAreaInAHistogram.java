@@ -53,6 +53,17 @@ public class MaximumRectangularAreaInAHistogram {
         }
         return res;
     }
+    public static void reverse(long[] resOfNSR) {
+        int lo = 0;
+        int hi = resOfNSR.length-1;
+        while(lo<hi) {
+            int temp = lo;
+            lo = hi;
+            hi = temp;
+            lo++;
+            hi--;
+        }
+    }
     public static long[] calculateNSRIndex(long[] arr, int n) {
         long[] resOfNSR = new long[n];
         Stack<Pair> s = new Stack<>();
@@ -76,6 +87,7 @@ public class MaximumRectangularAreaInAHistogram {
                 s.add(new Pair(i, arr[i]));
             }
         }
+//        reverse(resOfNSR);
         return resOfNSR;
     }
 
