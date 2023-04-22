@@ -94,16 +94,8 @@ public class MaximumRectangularAreaInAHistogram {
     public static long getMaxArea(long[] hist, long n)
     {
         // your code here
-        long max = Integer.MIN_VALUE;
-
         if(hist.length == 1)
             return hist[0];
-
-        if(hist.length == 2) {
-//            return hist[0]>hist[1]?hist[0]:hist[1];
-            return Math.max(hist[0], hist[1]);
-        }
-
 
         long[] nslIndex = calculateNSLIndex(hist, hist.length);
         long[] nsrIndex = calculateNSRIndex(hist, hist.length);
@@ -118,11 +110,13 @@ public class MaximumRectangularAreaInAHistogram {
         System.out.println("left"+Arrays.toString(nslIndex));
         System.out.println("right"+Arrays.toString(nsrIndex));
         System.out.println("width"+Arrays.toString(width));
-        System.out.println("hist[] - width[]"+Arrays.toString(res));
+        System.out.println("hist[]*width[]"+Arrays.toString(res));
+
+        long max = res[0];
         for (int i = 1; i < res.length; i++) {
 
-            if(res[i] >= res[i-1]){
-                max = Math.max(max, res[i]);
+            if(res[i] >= max){
+                max = res[i];
             }
         }
         return max;

@@ -3,6 +3,11 @@ package datastructure.stack.MaximumAreaOfRectangleInABinaryMatrix;
 import java.util.Arrays;
 import java.util.Stack;
 
+
+/**
+ * this question is similar to MAH but need to do little modification.
+ * vry straight forward solution
+ */
 class Pair {
     int key;
     int value;
@@ -78,7 +83,7 @@ public class MaximumAreaOfRectangleInABinaryMatrix {
     public static int calculateMAH(int[] hist)
     {
         // your code here
-        int max = Integer.MIN_VALUE;
+//        int max = Integer.MIN_VALUE;
 
         if(hist.length == 1)
             return hist[0];
@@ -98,9 +103,16 @@ public class MaximumAreaOfRectangleInABinaryMatrix {
         for (int i = 0; i< hist.length; i++) {
             area[i] = hist[i]*width[i];
         }
+//        for (int i = 1; i < area.length; i++) {
+//            if(area[i] >= area[i-1]){
+//                max = Math.max(max, area[i]);
+//            }
+//        }
+        int max = area[0];
         for (int i = 1; i < area.length; i++) {
-            if(area[i] >= area[i-1]){
-                max = Math.max(max, area[i]);
+
+            if(area[i] >= max){
+                max = area[i];
             }
         }
         return max;
