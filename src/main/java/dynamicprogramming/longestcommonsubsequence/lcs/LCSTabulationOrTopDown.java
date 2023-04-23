@@ -6,7 +6,7 @@ public class LCSTabulationOrTopDown {
         tb = new int[x+1][y+1];
         for(int i = 0; i<x+1; i++) {
             for(int j = 0; j<y+1; j++) {
-                if(i == 0 || y == 0)
+                if(i == 0 || j == 0)
                     tb[i][j] = 0;
             }
         }

@@ -1,15 +1,14 @@
 package dynamicprogramming.unboundedknapsack;
 
 /**
- * @Problem
+ * @Hint: Same as count subset sum or perfect sum problem
+ * @Problem:
  * Given an integer array coins[ ] of size N representing different denominations of currency and
  * an integer sum, find the number of ways you can make sum by using different
  * combinations from coins[ ].
  * Note: Assume that you have an infinite supply of each type of coin
- */
 
-/**
- * @example
+ * @Example:
  * Input:
  * sum = 4 ,
  * N = 3
@@ -18,7 +17,7 @@ package dynamicprogramming.unboundedknapsack;
  * Explanation: Four Possible ways are:
  * {1,1,1,1},{1,1,2},{2,2},{1,3}.
  */
-public class CoinChange {
+public class CoinChangeTabulation {
 
     public static long count(int coins[], int n, int sum) {
         // code here.
@@ -33,6 +32,7 @@ public class CoinChange {
         for (int i = 1; i<dp.length; i++) {
             for (int j = 1; j<dp[0].length; j++) {
                 if (coins[i-1] <= j) {
+                    // dp[i] === infinite supply, same as count subset sum problem
                     dp[i][j] = dp[i][j-coins[i-1]] + dp[i-1][j];
                 } else {
                     dp[i][j] = dp[i-1][j];
