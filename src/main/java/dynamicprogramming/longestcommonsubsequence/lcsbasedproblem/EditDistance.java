@@ -1,14 +1,17 @@
 package dynamicprogramming.longestcommonsubsequence.lcsbasedproblem;
 
 public class EditDistance {
+    /**
+     * tabulation solution
+     */
     static int[][] tb;
-    public static int lcs(int x, int y, String s1, String s2) {
+    public static int lcsUtil(int x, int y, String s1, String s2) {
         tb = new int[x+1][y+1];
         for(int i = 0; i<x+1; i++) {
-            for(int j = 0; j<y+1; j++) {
-                if(i == 0 || j == 0)
-                    tb[i][j] = 0;
-            }
+            tb[i][0]=i;
+        }
+        for(int j = 0; j<y+1; j++) {
+            tb[0][j]=j;
         }
         for(int i = 1; i<x+1; i++) {
             for (int j = 1; j < y + 1; j++) {
@@ -23,16 +26,29 @@ public class EditDistance {
         return tb[x][y];
     }
 
-    public int editDistance(String s, String t) {
+    public static int editDistance(String s, String t) {
         // Code here
-        int s1 = s.length();
-        int s2 = t.length();
+        return lcsUtil(s.length(), t.length(), s, t);
+    }
 
-        int lcs = lcs(s.length(), t.length(), s, t);
-        // System.out.println(lcs);
-        // if(s1>s2)
-        return lcs;
-        // else
-        // return s2-lcs;
+    /**
+     * This Recursive Solution for edit distance solution
+     * @param s
+     * @param t
+     * @return integer value
+     */
+    public static int editDistanceNaive(String s, String t, int m, int n) {
+        if(m==0) return n;
+        if(n==0) return m;
+        if (s.charAt(m-1) == t.charAt(n-1))
+            return editDistanceNaive(s, t, m-1, n-1);
+        else
+            return 1 + Math.min(editDistanceNaive(s, t, m, n-1),
+                        Math.min(editDistanceNaive(s, t, m-1, n),
+                            editDistanceNaive(s, t, m-1, n-1)));
+    }
+    public static void main(String[] args) {
+        System.out.println(editDistanceNaive("saturday","sunday", 8, 6));
+        System.out.println(editDistance("ecfbefdcfca","badfcbebbf"));
     }
 }

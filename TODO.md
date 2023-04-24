@@ -2,7 +2,7 @@
 
 - [ ] longest palindromic substring (leetcode)
 - [ ] Number of Longest Increasing Subsequence (leetcode)
-- [ ] Edit Distance
+- [x] Edit Distance
 
 ### In Progress
 
