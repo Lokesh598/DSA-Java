@@ -40,4 +40,8 @@ public class DeleteOperationForTwoStrings {
         System.out.println(lcs);
         return (s.length() - lcs) + (t.length() - lcs);
     }
+    public static void main(String[] args) {
+        DeleteOperationForTwoStrings o = new DeleteOperationForTwoStrings();
+        System.out.println(o.minDistance("sea", "eat"));
+    }
 }
