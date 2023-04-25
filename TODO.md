@@ -6,7 +6,7 @@
 
 ### In Progress
 
-- [ ] Work on Github Repo [JIRA-345]
+- [ ] longest palindromic substring
 
 ### Done ✓
 
