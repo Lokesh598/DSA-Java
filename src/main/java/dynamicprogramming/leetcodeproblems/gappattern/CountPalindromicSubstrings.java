@@ -1,4 +1,4 @@
-package dynamicprogramming.leetcodeproblems;
+package dynamicprogramming.leetcodeproblems.gappattern;
 
 /**
  * @Leetcode: 647

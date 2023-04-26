@@ -1,4 +1,4 @@
-package dynamicprogramming.leetcodeproblems;
+package dynamicprogramming.leetcodeproblems.gappattern;
 
 /**
  * this problem is variation of count palindromic substrings
