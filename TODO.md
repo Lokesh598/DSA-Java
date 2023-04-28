@@ -1,12 +1,15 @@
 ### Todo
 
-- [ ] longest palindromic substring (leetcode)
+- [ ] lcs space optimization
+- [ ] egg drop puzzle
+- [ ] unique bst's
+- [X] longest palindromic substring (leetcode)
 - [ ] Number of Longest Increasing Subsequence (leetcode)
-- [x] Edit Distance
+- [X] Edit Distance
 
 ### In Progress
 
-- [ ] longest palindromic substring
+- 
 
 ### Done ✓
 
