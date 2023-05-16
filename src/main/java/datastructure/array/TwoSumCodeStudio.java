@@ -1,14 +1,15 @@
 package datastructure.array;
 
-import java.util.Arrays;
+import java.util.*;
 
 /**
  * Input: nums = [3,2,4], target = 6
  * Output: [1,2]
  */
 public class TwoSumLeetcode {
-    public static int[] twoSum(int[] arr, int target) {
-        int[] res = new int[arr.length];
+    public static List<Integer> twoSum(int[] arr, int target) {
+//        Integer[] res;
+        List<Integer> res = new ArrayList<>();
         int left = 0, right = arr.length-1;
         Arrays.sort(arr);
 
@@ -19,8 +20,8 @@ public class TwoSumLeetcode {
             }
             int sum = arr[left] + arr[right];
             if (sum == target) {
-                res[left] = left;
-                res[right] = right;
+                res.add(arr[left]);
+                res.add(arr[right]);
                 left++;
                 right --;
             } else if (sum > target) {
@@ -34,6 +35,6 @@ public class TwoSumLeetcode {
 
     public static void main(String[] args) {
         int[] arr = new int[] {3,2,4};
-        System.out.println(Arrays.toString(twoSum(arr, 6)));
+        System.out.println(twoSum(arr, 6));
     }
 }
