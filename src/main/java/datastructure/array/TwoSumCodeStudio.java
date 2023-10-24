@@ -4,9 +4,9 @@ import java.util.*;
 
 /**
  * Input: nums = [3,2,4], target = 6
- * Output: [1,2]
+ * Output: [2,4]
  */
-public class TwoSumLeetcode {
+public class TwoSumCodeStudio {
     public static List<Integer> twoSum(int[] arr, int target) {
 //        Integer[] res;
         List<Integer> res = new ArrayList<>();
@@ -34,7 +34,7 @@ public class TwoSumLeetcode {
     }
 
     public static void main(String[] args) {
-        int[] arr = new int[] {3,2,4};
-        System.out.println(twoSum(arr, 6));
+        int[] arr = new int[] {2,1,1,2,4,3,6,5,6,8,7,9,9};
+        System.out.println(twoSum(arr, 10));
     }
 }
